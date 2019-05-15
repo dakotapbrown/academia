@@ -1,0 +1,67 @@
+<form action='utilities/process_newEvent.php' method='POST'>
+	<fieldset>
+		<div id='fieldset'>
+			<div id='title'>
+				<label>Event Title</label>
+				<input type="text" id="eventTitle" name="eventTitle" class="form-control" required>
+				<span id="eventTitleError" class="error" aria-live="polite"></span>
+			</div>
+			
+			<div id='eventStart'>
+				<label>Starts</label>
+				<div class="form-group">
+					<div class='input-group date' id="startDateTimePicker" name="startDateTimePicker">
+						<input type='text' class="form-control" />
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+			
+			<div id='eventEnd'>
+				<label>Ends</label>
+				<div class="form-group">
+					<div class='input-group date' id="endDateTimePicker" name="endDateTimePicker">
+						<input type='text' class="form-control" />
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+			
+			<div id='desc'>
+				<label>Description</label>
+				<input type="text" id="description" name="description" class="form-control">
+				<span id="descriptionError" class="error" aria-live="polite"></span>
+			</div>
+			
+			<div id='loc'>
+				<label>Location</label>
+				<input type="text" id="location" name="location" class="form-control">
+				<span id="locationError" class="error" aria-live="polite"></span>
+			</div>
+			
+			<div id='tagData'>
+				<label>Tag</label>
+				<input type="text" id="tag" name="tag" class="form-control">
+				<span id="tagError" class="error" aria-live="polite"></span>
+			</div>
+			
+			<div id='partpData'>
+				<label>Max Participants</label>
+				<input type="number" id="partp" name="partp" class="form-control">
+				<span id="partpError" class="error" aria-live="polite"></span>
+			</div>
+			
+			<div id='priv'>
+				<label>Location</label>
+				<select id="privacy" name='privacy' class="form-control">
+					<option value='public'>Public</option>
+					<option value='private'>Private</option>
+				</select>
+			</div>
+		</div>
+	</fieldset>
+</form>

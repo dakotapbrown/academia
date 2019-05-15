@@ -1,0 +1,79 @@
+<song>
+	<title>
+		Extra closing album tag - should be error
+	</title>
+	<artist>
+		Iron & Wine
+	</artist>
+	<album>
+		The Trapeze Swinger - Single
+	</album>
+	</album>
+</song>
+
+<song>
+  <title>
+    The Trapeze Swinger
+  </title>
+  <artist>
+    Iron & Wine
+  </artist>
+  <playcount>
+    131
+  </playcount>
+  <album>
+    The Trapeze Swinger - Single
+  </album>
+</song>
+
+<song>
+<title> song 1 
+  <artist>
+    Iron & Wine
+  </artist>
+  </title>
+  <album>
+    The Trapeze Swinger - Single
+  </album>
+  </album>
+</song>
+
+
+<song>
+	<title>
+		Open angle bracket at end - should be fine
+	</title>
+	<artist>
+		Iron & Wine
+	</artist>
+	<album>
+		The Trapeze Swinger - Single
+	</album>
+	< 
+</song>
+
+<song>
+	<title>
+		No artist tags - should be error
+	</title>
+	
+	<album>
+		The Trapeze Swinger - Single
+	</album>
+</song>
+
+<song>
+	<title>
+		Open and close angle brackets elsewhere - should be fine
+	</title>
+		sdg < asfdsda>> sdg dsgg< helloadafbs >>> /</ >
+	<artist>
+		Iron & Wine <going> 
+	</artist>
+	<album>
+		
+		sdg < asfdsda>> sdg dsgg< helloadafbs >>> /</ >
+		The Trapeze Swinger - Single </going>
+	</album>
+	<hello
+</song>

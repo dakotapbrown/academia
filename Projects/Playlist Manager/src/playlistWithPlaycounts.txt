@@ -1,0 +1,526 @@
+<song>
+  <title>
+    The Trapeze Swinger
+  </title>
+  <artist>
+    Iron & Wine
+  </artist>
+  <playcount>
+    131
+  </playcount>
+  <album>
+    The Trapeze Swinger - Single
+  </album>
+</song>
+
+<song>
+  <title>
+    Call It Dreaming
+  </title>
+  <playcount>
+    77
+  </playcount>
+  <artist>
+    Iron & Wine
+  </artist>
+  <album>
+    Beast Epic
+  </album>
+  https://www.youtube.com/watch?v=BXC80ZXQhvQ&feature=share
+</song>
+
+<song>
+  <title>
+    Passing Afternoon
+  </title>
+  Our Endless Numbered Days is the second full-length album from Iron & Wine. Released on March 23, 2004 on Sub Pop, it was the first non-solo effort by Sam Beam under his Iron & Wine moniker. Limited edition copies of the vinyl LP came with a bonus 7" vinyl single. Limited edition copies of the CD came with a bonus CD single.
+  <artist>
+    Iron & Wine
+  </artist>
+  <album>
+    Our Endless Numbered Days
+  </album>
+  <playcount>
+    19
+  </playcount>
+</song>
+
+<song>
+  <album>
+    Garden State Soundtrack
+  </album>
+  <title>
+    Such Great Heights
+  </title>
+  <artist>
+    Iron & Wine
+  </artist>
+  <playcount>
+    137
+  </playcount>
+</song>
+
+<song>
+  <album>
+    Kiss Each Other Clean
+  </album>
+  <title>
+    Half Moon
+  </title>
+  <artist>
+    Iron & Wine
+  </artist>
+  <playcount>
+    13
+  </playcount>
+</song>
+
+<song>
+  <album>
+    Our Endless Numbered Days
+    <title>
+      Love and Some Verses
+    </title>
+    <artist>
+      Iron & Wine
+    </artist>
+  </album>
+  <playcount>
+    0
+  </playcount>
+</song>
+
+
+<song>
+	<title>
+		Extra closing album tag - should be error
+	</title>
+	<artist>
+		Iron & Wine
+	</artist>
+	<album>
+		The Trapeze Swinger - Single
+	</album>
+	</album>
+</song>
+
+<song>
+  <title>
+    The Trapeze Swinger
+  </title>
+  <artist>
+    Iron & Wine
+  </artist>
+  <playcount>
+    131
+  </playcount>
+  <album>
+    The Trapeze Swinger - Single
+  </album>
+</song>
+
+<song>
+<title> song 1 
+  <artist>
+    Iron & Wine
+  </artist>
+  </title>
+  <album>
+    The Trapeze Swinger - Single
+  </album>
+  </album>
+</song>
+
+
+<song>
+	<title>
+		Open angle bracket at end - should be fine
+	</title>
+	<artist>
+		Iron & Wine
+	</artist>
+	<album>
+		The Trapeze Swinger - Single
+	</album>
+	< 
+</song>
+
+<song>
+	<title>
+		No artist tags - should be error
+	</title>
+	
+	<album>
+		The Trapeze Swinger - Single
+	</album>
+</song>
+
+<song>
+	<title>
+		Open and close angle brackets elsewhere - should be fine
+	</title>
+		sdg < asfdsda>> sdg dsgg< helloadafbs >>> /</ >
+	<artist>
+		Iron & Wine <going> 
+	</artist>
+	<album>
+		
+		sdg < asfdsda>> sdg dsgg< helloadafbs >>> /</ >
+		The Trapeze Swinger - Single </going>
+	</album>
+	<hello
+</song>
+
+<song>
+<title> song 1 error
+  <artist>
+    Iron & Wine
+  </artist>
+  </title>
+  <album>
+    The Trapeze Swinger - Single
+  </album>
+  </album>
+</song>
+
+<song>
+  <title>
+    Call It Dreaming not error
+  </title>
+  <artist>
+    Iron & Wine
+  </artist>
+  <album>
+    Beast Epic
+  </album>
+  https://www.youtube.com/watch?v=BXC80ZXQhvQ&feature=share
+</song>
+
+<song>
+  <title>
+    Passing Afternoon not error
+  </title>
+  Our Endless Numb<>,lguy5dsexrcj,ered Days is the second full-length album from Iron & Wine. Released on March 23, 2004 on Sub Pop, it was the first non-solo effort by Sam Beam under his Iron & Wine moniker. Limited edition copies of the vinyl LP came with a bonus 7" vinyl single. Limited edition copies of the CD came with a bonus CD single.
+  <artist>
+    Iron & Wine<><><><><>
+  </artist>
+  <album>
+    Our Endless Numbered Days
+  </album>
+</song>
+
+<song>
+  <album>
+    Garden State Soundtrack
+  </album>
+  <title>
+    Such Great Heights not error
+  </title>
+  <artist>
+    Iron & Wine
+  </artist>
+</song>
+
+<song>
+  <album>
+    Kiss Each Other Clean
+  </album>
+  <title>
+    Half Moon not error
+  </title>
+  <artist>
+    Iron & Wine
+  </artist>
+  <playcount>
+    13
+  </playcount>
+</song>
+
+<song>
+  <album>
+    Our Endless Numbered Days
+    <title>
+      Love and Some Verses error
+    </title>
+    <artist>
+      Iron & Wine
+    </artist>
+	</album>
+</song>
+
+
+<song>
+  <album>
+    Our Endless Numbered Days
+    <title>
+      Love and Some Verses error
+    </title>
+    <artist>
+      Iron & Wine
+    </artist>
+</song>
+
+<song>
+  <album>here</album>
+    Our Endless Numbered Days
+    <title>
+      Love and Some Verses not error
+    </title>
+    <artist>
+      Iron & Wine
+    </artist>
+</song>
+
+<song>
+<title> error <album>
+a<><</album>
+</title>
+<album> </album>
+<artist> </artist>a ,<
+</song>
+
+<song>
+  <album><>>SGSDFG><Afafnlnsi;n^%*$37278648129ot8hlernnivp[o]q[g'kp;.aagih;buee	qh/ra;vdu/
+	</album>
+    <title>
+      Love and Some Verses< not error
+    </title>
+    <artist>
+      Iron & Wine
+    </artist><
+</song>
+
+<song>
+<title>
+jgiykl.,m,lio<.miuykydfkg.kn error
+</title><<<<<<<<<<
+</song>
+
+<song>
+	<album>
+		Album<><.ki.9;5.9l48ke7w5sryt
+	</album>
+    <title>
+		Title One not error
+    </title>
+	<title>
+		Title Two
+	</title>
+    <artist>
+		Artist
+    </artist>
+<song> 
+
+
+
+<song>
+  <title>
+    The Trapeze Swinger
+  </title>
+  <artist>
+    Iron & Wine
+  </artist>
+  <playcount>
+    131
+  </playcount>
+  <album>
+    The Trapeze Swinger - Single
+  </album>
+</song>
+
+<song>
+  <title>
+    Call It Dreaming
+  </title>
+  <playcount>
+    77
+  </playcount>
+  <artist>
+    Iron & Wine
+  </artist>
+  <album>
+    Beast Epic
+  </album>
+  https://www.youtube.com/watch?v=BXC80ZXQhvQ&feature=share
+</song>
+
+<song>
+  <title>
+    Passing Afternoon
+  </title>
+  Our Endless Numbered Days is the second full-length album from Iron & Wine. Released on March 23, 2004 on Sub Pop, it was the first non-solo effort by Sam Beam under his Iron & Wine moniker. Limited edition copies of the vinyl LP came with a bonus 7" vinyl single. Limited edition copies of the CD came with a bonus CD single.
+  <artist>
+    Iron & Wine
+  </artist>
+  <album>
+    Our Endless Numbered Days
+  </album>
+  <playcount>
+    19
+  </playcount>
+</song>
+
+<song>
+  <album>
+    Garden State Soundtrack
+  </album>
+  <title>
+    Such Great Heights
+  </title>
+  <artist>
+    Iron & Wine
+  </artist>
+  <playcount>
+    137
+  </playcount>
+</song>
+
+<song>
+  <album>
+    Kiss Each Other Clean
+  </album>
+  <title>
+    Half Moon
+  </title>
+  <artist>
+    Iron & Wine
+  </artist>
+  <playcount>
+    13
+  </playcount>
+</song>
+
+<song>
+  <album>
+    Our Endless Numbered Days
+    <title>
+      Love and Some Verses
+    </title>
+    <artist>
+      Iron & Wine
+    </artist>
+  </album>
+  <playcount>
+    0
+  </playcount>
+</song>
+
+<song>
+<title>
+Sleepyhead
+</title>
+<artist>
+Passion Pit
+</artist>
+<album>
+Manners
+</album>
+<playcount>
+210
+</playcount>
+</song>
+
+<song>
+<title>
+The Kids Don't Stand a Chance
+</title>
+<artist>
+Vampire Weekend
+</artist>
+<album>
+Vampire Weekend
+</album>
+<playcount>
+918
+</playcount>
+</song>
+
+<song>
+<title>
+For Emma
+</title>
+<artist>
+Bon Iver
+</artist>
+<album>
+For Emma, Forever Ago
+</album>
+<playcount>
+228
+</playcount>
+</song>
+
+<song>
+<title>
+White Winter Hymnal
+</title>
+<artist>
+Fleet Foxes
+</artist>
+<album>
+Fleet Foxes
+</album>
+<playcount>
+832
+</playcount>
+</song>
+
+<song>
+<title>
+You Got Yr. Cherry Bomb
+</title>
+<artist>
+Spoon
+</artist>
+<album>
+Ga Ga Ga Ga Ga (Bonus Track Version)
+</album>
+<playcount>
+24
+</playcount>
+</song>
+
+<song>
+<title>
+1901
+</title>
+<artist>
+Phoenix
+</artist>
+<album>
+Wolfgang Amadeus Phoenix
+</album>
+<playcount>
+655
+</playcount>
+</song>
+
+<song>
+<title>
+Sweet Disposition
+</title>
+<artist>
+The Temper Trap
+</artist>
+<album>
+Conditions
+</album>
+<playcount>
+1029
+</playcount>
+</song>
+
+<song>
+<title>
+Cheerleader
+</title>
+<artist>
+Grizzly Bear
+</artist>
+<album>
+Veckatimest
+</album>
+<playcount>
+620
+</playcount>
+</song>
