@@ -1,0 +1,19 @@
+0 --> Function, header, body empty arg-decl
+1 --> Check single arg-decl
+2 --> Single statement (statement-list , statement, assignment, expression, term)
+3 --> multiple statements 
+4 --> multiple arg-decl 
+5 --> while-loop, double equal sign, parenthesis expression 
+6 --> nested parenthesis, missing whitespace, return statement,!= lexeme
+7 --> Working code
+8 --> Nested bodies 
+
+B0 --> Invalid assignment statement 
+B1 --> Missing EOL in assignment 
+B2 --> Missing EOL in return 
+B3 --> Single identifier sans content 
+B4 --> return without expression 
+B5 --> Empty parenthesis in body 
+B6 --> While loop without expression 
+B7 --> invalid header 
+B8 --> Extra body bracket 

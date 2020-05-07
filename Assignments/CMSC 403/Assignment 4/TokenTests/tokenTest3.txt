@@ -1,0 +1,4 @@
+void three(int y){
+	froot=20;
+	loops=19;
+}

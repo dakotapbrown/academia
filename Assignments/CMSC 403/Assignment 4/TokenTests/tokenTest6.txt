@@ -1,0 +1,8 @@
+int six(int water, int air){
+	water=(1*4);
+	air = ((2+2));
+	while(air!=water){
+		air = water;
+	}
+	return air;
+}

@@ -1,0 +1,44 @@
+#! /bin/bash
+
+############################################################################################
+#This is a sample script, displaying the expectations for formatting and commenting of code#
+#It contains two functions, good_func and bad_func					   #
+#good_func is properly commented and formatted. 100% for good_func!			   #
+#bad_func is neither commented nor formatted. 0% for bad_func!				   #
+#											   #
+#Author - Seth Jansen									   #
+#CMSC 257 - Section 1									   #
+############################################################################################
+
+#----------------------------------------------------------------#
+#This is a well commented, well formatted sample function	 #
+#Input - N/A		  	 				 #
+#Output - "Hello World" to stdout				 #
+#----------------------------------------------------------------#
+good_func () {
+	list=("Hello" "World")
+
+	#Loop to travers list
+	for i in ${list[@]}; do
+		echo "$i "
+	done
+}
+
+bad_func () {
+list=("Hello" "World")
+for i in ${list[@]}; do
+echo "$i "
+done
+}
+
+#----------------------------#
+#Script execution starts here#
+#----------------------------#
+
+#Run good_func
+printf "Running good_func:\n"
+good_func
+
+#Run bad_func
+printf "\nRunning bad_func:\n"
+bad_func

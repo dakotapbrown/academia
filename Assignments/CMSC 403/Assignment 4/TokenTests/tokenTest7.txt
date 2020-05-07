@@ -1,0 +1,8 @@
+int gcd(int a1, int a2){
+	while (a2 != 0) {
+		reminder = a1 % a2;
+		a1 = a2;
+		a2 = reminder;
+	}
+	return a1;
+}

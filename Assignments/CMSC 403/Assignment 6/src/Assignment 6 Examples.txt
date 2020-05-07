@@ -1,0 +1,32 @@
+;tests
+
+;myList
+(myList) ;(4 (7 22) "art" ("math" (8) 99) 100)
+
+;no test for leap year, verify yourself
+(leapYear)
+
+;union- 
+(union- '(1 2 3 4 5) '(4 5 8 9) ) ;(1 2 3 4 5 8 9)
+
+;avg
+(avg '(2 4 6 8 19)) ;39/5
+
+;isType 
+;NOTE: return value of isType should be in the form given, but the exact return value will differ for each individual
+
+(isType 'String) ;#<CLOSURE (LAMBDA (VALUE) :IN ISTYPE) {1001B1717B}>
+
+;taxCalculator
+(taxCalculator 250 .05 '(20 50 100 250 300 600 10 5 2) ) ;(20 50 100 250 15.0 30.0 10 5 2)
+
+;clean 
+;aFunc represents a function which takes a single argument. aFunc returns true if the given argument is a number. aFunc is not a real function name, rather it is a stand in name for either a system or user defined function which will be used instead. 
+
+(clean #'aFunc '(2 3 #\F 4 5 "Hello!") )  ;(2 3 4 5)
+(clean #'aFunc '(2 (3 4 "World" 5 6 #\T 7) #\F 8 9 "Hello!")) ;(2 (3 4 5 6 7) 8 9)
+
+;threeWayBranch
+(threeWayBranch 2 3 ( ((print "Hello")) ((print "Hello")(print "World")) ((print "!")) ) ) ;"Hello"
+(threeWayBranch 3 2 ( ((print "Hello")) ((print "Hello")(print "World")) ((print "!")) ) ) ;"Hello" "World"
+(threeWayBranch 3 3 ( ((print "Hello")) ((print "Hello")(print "World")) ((print "!")) ) ) ;"!"

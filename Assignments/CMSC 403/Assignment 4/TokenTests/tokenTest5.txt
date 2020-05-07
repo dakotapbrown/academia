@@ -1,0 +1,5 @@
+int five(int d,int e){
+	while(d==e){
+		d=(d+1);
+	}
+}

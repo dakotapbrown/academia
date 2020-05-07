@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane fx:controller="edu.vcu.browndp.RaceTrackController"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <HBox spacing="50" alignment="CENTER">
+            <padding>
+                <Insets top="15" right="12" bottom="15" left="12"/>
+            </padding>
+
+            <Button text="Start"
+                    onAction="#startButton"/>
+            <Button text="Pause"
+                    onAction="#pauseButton"/>
+            <Button text="Reset"
+                    onAction="#resetButton"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="15" right="12" bottom="15" left="12"/>
+            </padding>
+            <ImageView fx:id="car1">
+                <Image url="@resources/sportive-car.png"/>
+            </ImageView>
+
+            <ImageView fx:id="car2">
+                <Image url="@resources/sportive-car.png"/>
+            </ImageView>
+
+            <ImageView fx:id="car3">
+                <Image url="@resources/sportive-car.png"/>
+            </ImageView>
+        </VBox>
+    </center>
+
+</BorderPane>

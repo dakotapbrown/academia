@@ -1,0 +1,228 @@
+#! /bin/bash
+
+#---------------------------------------------------------------------------------# 
+# Function to determine if user input was 'quit' command, and if so, exits script #
+# promptly.                                                                       #
+# Input - Input from 'read' command                                               #
+# Output - N/A                                                                    #
+#---------------------------------------------------------------------------------#
+function isQuit() {
+
+if [[ ! -z "$1" && $1 == :q ]]
+then	
+	exit 0
+fi
+}
+
+#-----------------------------------------------------------------------------------#
+# Function to determine if user input was 'archive' command. Sets archive flag to 1 #
+# Input - Input from 'read' command during loop that asks for file names.           #
+# Output - N/A                                                                      #
+#-----------------------------------------------------------------------------------#
+function isArchive() {
+
+if [[ ! -z "$1" && $1 == :a ]]
+then
+	let "a=1"
+fi
+}
+
+
+#-----------------------------------------#
+# Function to file loop if * is indicated #
+# Input - file name                       #
+# Output - N/A                            #
+#-----------------------------------------#
+function isFileStar() {
+
+if [[ ! -z "$1" && $1 == * ]]
+then
+	let "a=1"
+	files=*
+fi
+}
+
+#-------------------------------------------------------------------------------#
+# Function that executes with 'archive' as the supplied argument to this script #
+# Input - N/A                                                                   #
+# Output - Prompts for user input                                               #
+#-------------------------------------------------------------------------------#
+function archive() {
+
+	#-----------------------------------------#
+	# Global variable for use as archive flag #
+	#-----------------------------------------#
+	a=0
+
+
+	#  Display options to user for archiving  #
+	echo Specify at least only one of following:
+	echo -e '\tc - create a new archive'
+	echo -e '\tr – append or update files or directories to existing archive file\n\t    (note: cannot append to archive file compressed with "j" or "z" options enabled)'
+	echo Additional options:
+	echo -e '\tv – show the progress of archive file'
+	echo -e '\tvv - show progress of archive file with additional info'
+	echo "Following options only apply if 'c' option is specified:"
+	echo -e '\tj – filter archive through bzip2'
+	echo -e '\tz – filter archive through gzip'
+	echo -e '\n\tHit enter if none'
+	echo -e '\tType  ":q" at anytime to exit'
+
+	#  Ask user for 'tar' command options  #
+	read -p "vcutar options>" options
+
+	#  Determine if input is 'quit' command; if not, append user options to format '-*f'  #
+	isQuit $options
+	options=-${options}f
+
+	#  Ask user for directory of target files to archive, then determine  #
+	#> if 'quit' command has been issued                                  #
+	echo File or directory to archive
+	read -p "vcutar directory>" directory
+	isQuit $directory
+
+	#  Create array variable for filenames to be archived  #
+	declare -a files
+
+	#  Continuously ask user for filenames to archive until 'archive'  #
+	#> command is issued                                               #
+	echo 'type ":a" to archive file(s)/direcotry when finished'
+	i=0
+	until [ $a -eq 1 ]; do 
+		read -p "vcutar file>" arg
+		#  Determine if command or filename  #
+		isQuit $arg
+		isArchive $arg
+		isFileStar $arg
+ 
+		#  If archive flag has NOT been set, add 'arg'  #
+		#> to 'files' array                             #
+		if [ $a -ne 1 ] 
+		then
+			files[i]=$arg
+			let "i++"
+		fi
+	done
+
+	#  If 'directory' is * (star) character and is not empty string  #
+	#> ignore and move on; otherwise, append 'directory' to          #
+	#> beginning of each filename                                    #
+	if [[ $directory != "*" && ! -z "$directory" ]]
+	then
+		cnt=${#files[@]}
+		for (( i=0; i < cnt; i++ ))
+		do
+			files[i]="$directory/${files[i]}"
+		done
+	fi
+
+	#  Ask user for archive file name  # 
+	read -p "vcutar archive>" archive
+	isQuit $archive
+
+	echo "DEBUG: tar $options $archive ${files[@]}"
+
+	if [[ sed-$options == *z* && sed-$archive != *.tgz ]]
+	then
+		archive=${archive}.tgz
+	fi
+	
+	if [[ sed-$options == *j* && sed-$archive != *.tbz ]]
+        then archive=${archive}.tbz
+        fi
+
+	if [[ sed-$archive != *.tbz && sed-$archive != *.tgz && sed-$archive != *.tar ]]
+	then 
+		archive=${archive}.tar
+	fi
+
+	echo "DEBUG: tar $options $archive ${files[@]}"
+	tar $options $archive ${files[@]}
+
+}
+
+
+#------------------------------------------------------------------------------#
+# Funtion that executes with 'extract' as the supplied argument to this script #
+# Input - N/A                                                                  #
+# Output - Prompts for user input                                              #
+#------------------------------------------------------------------------------#
+function extract() {
+
+	#  Display options to user for extracting  #
+	echo Options:
+	echo -e '\tv – show the progress of archive file'
+	echo -e '\n\tHit enter if none'
+	echo -e '\tType  ":q" at anytime to exit'
+
+	#  Ask user for 'tar' command options  #
+	read -p "vcutar options>" options
+
+	#  Determine if input is 'quit' command; if not, append user options to format '-x*f'  #
+	isQuit $options
+	options=-x${options}f
+
+	echo Name of archive file to extract from
+	read -p "vcutar archive>" archive
+	isQuit $archive
+
+	echo "Target directory/file to extract from archive file (* if all files)"
+	read -p "vcutar file>" directory
+	isQuit $directory
+	
+	#  If 'directory' is * (star) character, set directory to empty string  #
+	if [[ $directory == "*" ]]
+	then
+		# echo "DEBUG: tar $options $archive"
+		tar $options $archive
+	else
+		# echo "DEBUG: tar $options $archive $directory"
+		tar $options $archive $directory
+	fi 
+
+}
+
+
+#---------------------------------------------------------------------------#
+# Funtion that executes with 'view' as the supplied argument to this script #
+# Input - N/A                                                               #
+# Output - Prompts for user input                                           #
+#---------------------------------------------------------------------------#
+function view() {
+
+	#  Display options to user for viewing  #
+	echo Options:
+	echo -e '\tv – show additional info of files in archove file'
+	echo -e '\n\tHit enter if none'
+	echo -e '\tType  ":q" at anytime to exit'
+
+	#  Ask user for 'tar' command options  #
+	read -p "vcutar options>" options
+
+	#  Determine if input is 'quit' command; if not, append user options to format '-t*f'  #
+	isQuit $options
+	options=-t${options}f
+
+	echo Name of archive file to view
+	read -p "vcutar archive>" archive
+	isQuit $archive
+	
+	# echo "DEBUG: tar $options $archive"
+	tar $options $archive
+
+}
+
+if [[ $1 == archive ]]
+then 
+	archive
+fi
+
+if [[ $1 == extract ]]
+then 
+	extract
+fi
+
+if [[ $1 == view ]]
+then 
+	view
+fi
