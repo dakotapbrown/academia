@@ -2,3 +2,5 @@ Various coding assignments completed throughout my academic years. Each folder c
 
 CMSC 401 - Algorithm Analysis with Advanced Data Structures
 CMSC 312 - Introduction to Operating Systems
+CMSC 403 - Programming Languages
+CMSC 257 - Computer Systems
